@@ -417,12 +417,28 @@
         </div>
     </footer>
     
+    <script src="https://js.stripe.com/v3/"></script>
     <script>
+        const stripe = Stripe('pk_test_51Td0LIRqATWSzJJzITDAjc8iutF8XchPJh74eMq2WVqSi6n99eldJMVoieAbV8C00uW1s6YNGNOX0VjRwmKnakeB00y6S7vw7Q');
+        
         function scrollToCheckout() {
-            // In a real scenario, this would go to a Stripe checkout
-            // For now, we'll log it
             console.log('Checkout initiated');
-            alert('Thank you! In production, this would go to payment processing.\n\nFor now, visit: felixcraft.ai/checkout\n\nPrice: $27 (one-time)');
+            
+            // Redirect to Stripe Checkout
+            stripe.redirectToCheckout({
+                lineItems: [{
+                    price: 'price_1Td1H0RqATWSzJJzKinDXV8B',
+                    quantity: 1
+                }],
+                mode: 'payment',
+                successUrl: window.location.href + '?success=true',
+                cancelUrl: window.location.href
+            }).then(function(result) {
+                if (result.error) {
+                    alert('Error: ' + result.error.message);
+                    console.error(result.error);
+                }
+            });
         }
     </script>
 </body>
