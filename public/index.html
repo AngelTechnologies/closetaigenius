@@ -417,28 +417,10 @@
         </div>
     </footer>
     
-    <script src="https://js.stripe.com/v3/"></script>
     <script>
-        const stripe = Stripe('pk_test_51Td0LIRqATWSzJJzITDAjc8iutF8XchPJh74eMq2WVqSi6n99eldJMVoieAbV8C00uW1s6YNGNOX0VjRwmKnakeB00y6S7vw7Q');
-        
         function scrollToCheckout() {
-            console.log('Checkout initiated');
-            
-            // Redirect to Stripe Checkout
-            stripe.redirectToCheckout({
-                lineItems: [{
-                    price: 'price_1Td1H0RqATWSzJJzKinDXV8B',
-                    quantity: 1
-                }],
-                mode: 'payment',
-                successUrl: window.location.href + '?success=true',
-                cancelUrl: window.location.href
-            }).then(function(result) {
-                if (result.error) {
-                    alert('Error: ' + result.error.message);
-                    console.error(result.error);
-                }
-            });
+            // Redirect to Stripe Payment Link
+            window.location.href = 'https://buy.stripe.com/test_28E8wR2Rn7nc783aNA8Ra00';
         }
     </script>
 </body>
