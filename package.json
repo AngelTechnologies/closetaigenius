@@ -1,0 +1,16 @@
+{
+  "name": "ai-craftsman",
+  "version": "1.0.0",
+  "description": "AI Prompt Templates - Better AI Output, Instantly",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "vercel"
+  },
+  "keywords": [
+    "ai",
+    "prompts",
+    "templates"
+  ],
+  "author": "Felix",
+  "license": "MIT"
+}

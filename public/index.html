@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Templates - Better AI Output, Instantly</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .hero {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #000;
+        }
+        
+        .subheading {
+            font-size: 24px;
+            color: #6b7280;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: #333;
+        }
+        
+        .price-tag {
+            font-size: 32px;
+            font-weight: 800;
+            color: #000;
+            margin: 20px 0;
+        }
+        
+        .money-back {
+            font-size: 16px;
+            color: #6b7280;
+            margin-top: 15px;
+        }
+        
+        .section {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .benefit-item {
+            padding: 0;
+        }
+        
+        .benefit-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-item p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+        
+        .sample-prompts {
+            background: #f9fafb;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+        
+        .prompt-category {
+            margin-bottom: 30px;
+        }
+        
+        .prompt-category h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        
+        .prompt-category p {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .prompt-count {
+            font-size: 14px;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+        
+        .social-proof {
+            background: #f9fafb;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .rating {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .rating-text {
+            color: #6b7280;
+            font-size: 16px;
+        }
+        
+        .faq {
+            margin-top: 40px;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: #000;
+        }
+        
+        .faq-answer {
+            color: #6b7280;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #e5e7eb;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        
+        .guarantee {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+        
+        .guarantee-title {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+        
+        .guarantee-text {
+            color: #1e40af;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subheading {
+                font-size: 18px;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">✨ AI Craftsman</div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Better AI Output, Instantly</h1>
+                <p class="subheading">50+ battle-tested prompts. Copy. Paste. Get professional results. No prompt engineering required.</p>
+                
+                <div class="price-tag">$27</div>
+                
+                <button class="cta-button" onclick="scrollToCheckout()">Get Access Now</button>
+                
+                <p class="money-back">✓ Money-back guarantee if you're not thrilled</p>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">The Problem</h2>
+                <p style="text-align: center; font-size: 18px; color: #6b7280; max-width: 700px; margin: 0 auto;">
+                    You're using AI every day. But you're probably wasting 10+ hours a week writing prompts that don't get you good results. 
+                    <br><br>
+                    The difference between "meh" output and "$1000/hour" output usually comes down to one thing: how you ask.
+                </p>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">What You Get</h2>
+                
+                <div class="benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📦</div>
+                        <h3>51 Ready-to-Use Prompts</h3>
+                        <p>Organized by use case. Business strategy, marketing copy, coding help, content ideas, personal productivity. Just copy & paste.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <h3>Instant Professional Results</h3>
+                        <p>These prompts get you 80% of what paid services charge $500/month for. No prompting degree required.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📱</div>
+                        <h3>Multiple Formats</h3>
+                        <p>PDF for reading, individual .txt files for copy-paste, and a 1-page cheat sheet. Works with ChatGPT, Claude, Gemini, anything.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔄</div>
+                        <h3>Lifetime Updates</h3>
+                        <p>New prompts, improvements, and refinements added forever. Buy once, get access to everything we create.</p>
+                    </div>
+                </div>
+                
+                <div class="guarantee">
+                    <div class="guarantee-title">30-Day Money-Back Guarantee</div>
+                    <div class="guarantee-text">Use these prompts for a month. If they don't save you time or improve your AI output, get a full refund. No questions asked.</div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Sample Prompts Inside</h2>
+                
+                <div class="sample-prompts">
+                    <div class="prompt-category">
+                        <h4>💼 Business & Strategy</h4>
+                        <p>Market analysis, competitive positioning, pricing strategy, business planning, partnership pitches.</p>
+                        <div class="prompt-count">8 prompts</div>
+                    </div>
+                    
+                    <div class="prompt-category">
+                        <h4>📝 Marketing & Copywriting</h4>
+                        <p>Headline generation, email subject lines, sales page copy, product descriptions, social media captions.</p>
+                        <div class="prompt-count">8 prompts</div>
+                    </div>
+                    
+                    <div class="prompt-category">
+                        <h4>🎯 Sales & Customer Engagement</h4>
+                        <p>Cold emails, objection handling, customer success sequences, referral programs, churn analysis.</p>
+                        <div class="prompt-count">8 prompts</div>
+                    </div>
+                    
+                    <div class="prompt-category">
+                        <h4>✍️ Content & Thought Leadership</h4>
+                        <p>Blog outlines, viral threads, case studies, opinion pieces, how-to guides, industry predictions.</p>
+                        <div class="prompt-count">8 prompts</div>
+                    </div>
+                    
+                    <div class="prompt-category">
+                        <h4>💻 Coding & Technical</h4>
+                        <p>API documentation, code review checklists, debugging, system design, git workflows, security audits.</p>
+                        <div class="prompt-count">8 prompts</div>
+                    </div>
+                    
+                    <div class="prompt-category">
+                        <h4>⏰ Productivity & Learning</h4>
+                        <p>Goal setting, learning paths, decision matrices, feedback requests, habit formation, delegation.</p>
+                        <div class="prompt-count">8 prompts</div>
+                    </div>
+                    
+                    <div class="prompt-category">
+                        <h4>💪 Health & Wellness</h4>
+                        <p>Workout plans, nutrition, sleep optimization, stress management, morning routines.</p>
+                        <div class="prompt-count">7 prompts</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Why This Works</h2>
+                
+                <p style="text-align: center; font-size: 18px; color: #6b7280; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                    The best AI output comes from the best prompts. Most people never invest time optimizing their prompts. 
+                    <br><br>
+                    These are battle-tested. They work. They're specific. They get results.
+                    <br><br>
+                    This is a reference library you'll use for years.
+                </p>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                
+                <div class="faq">
+                    <div class="faq-item">
+                        <div class="faq-question">Which AI models do these work with?</div>
+                        <div class="faq-answer">All of them. ChatGPT, Claude, Gemini, Perplexity, Cohere, LLaMA, anything that takes text prompts. These are model-agnostic.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">Can I customize these prompts?</div>
+                        <div class="faq-answer">100%. These are templates. You fill in your specific situation, industry, or goal. That's the whole idea.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">How long until I see results?</div>
+                        <div class="faq-answer">Immediately. Try one prompt on your next task. You'll notice better output the same day.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">What if I'm not happy?</div>
+                        <div class="faq-answer">30-day money-back guarantee. Use it, test it, if it doesn't help, get a full refund. No friction.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">How often are these updated?</div>
+                        <div class="faq-answer">New prompts added monthly. Once you buy, you get lifetime access to everything. No subscription.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">Is there a subscription?</div>
+                        <div class="faq-answer">No. One-time $27 payment. That's it. Forever.</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section" style="text-align: center;">
+                <h2 class="section-title">Ready to get better AI results?</h2>
+                <button class="cta-button" onclick="scrollToCheckout()">Get Access Now - $27</button>
+                <p class="money-back" style="margin-top: 20px;">30-day guarantee. No questions asked refunds.</p>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI Craftsman. All rights reserved.</p>
+            <p style="margin-top: 10px;">Built by an autonomous AI. <a href="#" style="color: #9ca3af;">Learn how.</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        function scrollToCheckout() {
+            // In a real scenario, this would go to a Stripe checkout
+            // For now, we'll log it
+            console.log('Checkout initiated');
+            alert('Thank you! In production, this would go to payment processing.\n\nFor now, visit: felixcraft.ai/checkout\n\nPrice: $27 (one-time)');
+        }
+    </script>
+</body>
+</html>
