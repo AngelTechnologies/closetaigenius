@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closet AI Genius - Master AI Prompting in 30 Days</title>
+    <meta name="description" content="51-147 AI prompts, frameworks, and a thriving community. Save 10+ hours/week. From $47 one-time to $497 lifetime. 30-day guarantee.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1f2937;
+            line-height: 1.6;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* HEADER / NAV */
+        header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.5em;
+            font-weight: 800;
+            color: #1f2937;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #1f2937;
+        }
+        
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        
+        .hero .subheadline {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin: 0 10px 10px 0;
+        }
+        
+        .cta-primary {
+            background: #fff;
+            color: #667eea;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+        
+        .cta-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-secondary:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        /* SECTION */
+        .section {
+            padding: 80px 20px;
+        }
+        
+        .section-dark {
+            background: #f9fafb;
+        }
+        
+        .section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #1f2937;
+        }
+        
+        .section h3 {
+            font-size: 1.8rem;
+            margin: 30px 0 20px 0;
+            color: #1f2937;
+        }
+        
+        .section p {
+            font-size: 1.05rem;
+            color: #4b5563;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        /* PRICING CARDS */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .price-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);
+        }
+        
+        .price-card.featured {
+            border-color: #667eea;
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.15);
+            transform: scale(1.05);
+        }
+        
+        .price-card.featured::before {
+            content: "MOST POPULAR";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .price-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.5rem;
+        }
+        
+        .price-tag {
+            font-size: 2.5rem;
+            color: #667eea;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+        
+        .price-description {
+            font-size: 0.95rem;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .features-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+            color: #4b5563;
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features-list li::before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* COMPARISON TABLE */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: #f9fafb;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            color: #1f2937;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid #e5e7eb;
+            color: #4b5563;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .check {
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        /* SOCIAL PROOF */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .testimonial {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+        
+        .testimonial:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1f2937;
+            background: #f9fafb;
+            user-select: none;
+        }
+        
+        .faq-question:hover {
+            background: #f3f4f6;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            color: #4b5563;
+            display: none;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .faq-toggle.active {
+            transform: rotate(180deg);
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .price-card.featured {
+                transform: scale(1);
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            .price-tag {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">🧠 Closet AI Genius</div>
+                <ul>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Master AI Prompting in 30 Days</h1>
+            <p class="subheadline">51-147 battle-tested prompts + frameworks + community</p>
+            <p class="description">Save 10+ hours/week. Get $1,000/hour output quality. 30-day money-back guarantee.</p>
+            <a href="#pricing" class="cta-button cta-primary">See Pricing →</a>
+            <a href="#faq" class="cta-button cta-secondary">Learn More</a>
+        </div>
+    </section>
+    
+    <!-- PRODUCTS SECTION -->
+    <section class="section section-dark" id="products">
+        <div class="container">
+            <h2>Choose Your Path</h2>
+            <p style="text-align: center; color: #6b7280; font-size: 1.1rem; margin-bottom: 50px;">Start with the basics or go deep. Upgrade anytime.</p>
+            
+            <div class="pricing-grid">
+                <!-- PRODUCT 1 -->
+                <div class="price-card">
+                    <h3>Starter</h3>
+                    <p class="price-description">Perfect for trying it out</p>
+                    <div class="price-tag">$47</div>
+                    <p style="color: #6b7280;">One-time purchase</p>
+                    <a href="https://closetaigenius.com/product1" class="cta-button cta-primary">Get Started</a>
+                    <ul class="features-list">
+                        <li>51 battle-tested prompts</li>
+                        <li>Quick reference guide</li>
+                        <li>Video setup tutorial</li>
+                        <li>30-day guarantee</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+                
+                <!-- PRODUCT 2 -->
+                <div class="price-card">
+                    <h3>Implementation</h3>
+                    <p class="price-description">Build your own system</p>
+                    <div class="price-tag">$97</div>
+                    <p style="color: #6b7280;">One-time purchase</p>
+                    <a href="https://closetaigenius.com/product2" class="cta-button cta-primary">Get Started</a>
+                    <ul class="features-list">
+                        <li>Complete Starter (51 prompts)</li>
+                        <li>Implementation framework</li>
+                        <li>Customization guide</li>
+                        <li>Decision trees</li>
+                        <li>30-day guarantee</li>
+                    </ul>
+                </div>
+                
+                <!-- PRO TIER -->
+                <div class="price-card">
+                    <h3>Pro</h3>
+                    <p class="price-description">Continuous growth & community</p>
+                    <div class="price-tag">$67<span style="font-size: 0.5em;">/mo</span></div>
+                    <p style="color: #6b7280;">First 100 get lifetime rate</p>
+                    <a href="https://closetaigenius.com/pro" class="cta-button cta-primary">Join Now</a>
+                    <ul class="features-list">
+                        <li>Everything in Starter</li>
+                        <li>100+ advanced templates</li>
+                        <li>Private community (Slack)</li>
+                        <li>Weekly new prompts</li>
+                        <li>Monthly live Q&A</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+                
+                <!-- MASTER TIER -->
+                <div class="price-card featured">
+                    <h3>Master</h3>
+                    <p class="price-description">The complete system</p>
+                    <div class="price-tag">$497</div>
+                    <p style="color: #6b7280;">One-time | 12 spots total</p>
+                    <a href="https://closetaigenius.com/master" class="cta-button cta-primary">Apply Now</a>
+                    <ul class="features-list">
+                        <li>Everything in Pro</li>
+                        <li>147 total advanced prompts</li>
+                        <li>Advanced techniques</li>
+                        <li>Private community (async Q&A)</li>
+                        <li>Quarterly live workshops</li>
+                        <li>1:1 workflow customization</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- COMPARISON -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2>Feature Comparison</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>Starter</th>
+                    <th>Implementation</th>
+                    <th>Pro</th>
+                    <th>Master</th>
+                </tr>
+                <tr>
+                    <td><strong>Prompts Included</strong></td>
+                    <td>51</td>
+                    <td>51 + framework</td>
+                    <td>100+</td>
+                    <td>147</td>
+                </tr>
+                <tr>
+                    <td><strong>Community Access</strong></td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="check">✓</span> (Priority)</td>
+                </tr>
+                <tr>
+                    <td><strong>Weekly Templates</strong></td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Live Q&A</strong></td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td><span class="check">✓</span> Monthly</td>
+                    <td><span class="check">✓</span> Quarterly + 1:1</td>
+                </tr>
+                <tr>
+                    <td><strong>Advanced Techniques</strong></td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Money-Back Guarantee</strong></td>
+                    <td><span class="check">✓</span> 30 days</td>
+                    <td><span class="check">✓</span> 30 days</td>
+                    <td>Cancel anytime</td>
+                    <td><span class="check">✓</span> 30 days</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <!-- SOCIAL PROOF -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-text">"I saved 8 hours this week using Closet AI Genius. At my billable rate, that's over $1,600. This paid for itself 30x over."</p>
+                    <p class="testimonial-author">— Jennifer, Consultant</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"My content creation went from 4 hours/day to 45 minutes. Open rates jumped from 15% to 38%. This is a game-changer."</p>
+                    <p class="testimonial-author">— Marcus, B2B Marketer</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"The prompts are good, but the community is what makes it worth the cost. Learning from other builders is priceless."</p>
+                    <p class="testimonial-author">— Sarah, Content Creator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Which plan should I choose?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Starter ($47):</strong> Try it out. See if AI prompting resonates. Get the core 51 prompts.</p>
+                    <p style="margin-top: 15px;"><strong>Implementation ($97):</strong> You have the prompts. Now learn how to build systems around them.</p>
+                    <p style="margin-top: 15px;"><strong>Pro ($67/mo):</strong> You want continuous growth, new templates, and community. Lock in the early rate.</p>
+                    <p style="margin-top: 15px;"><strong>Master ($497):</strong> You're serious about mastery. You want workshops, 1:1 help, and advanced techniques.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Do you offer refunds?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes. Starter, Implementation, and Master tiers include a 30-day money-back guarantee. No questions asked.</p>
+                    <p style="margin-top: 15px;">Pro tier: Cancel anytime. Monthly billing means you only pay for what you use.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Can I upgrade later?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. Start with Starter, upgrade to Pro or Master whenever you're ready. Your account carries over.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How many prompts do I get?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Starter:</strong> 51 core prompts across 8 categories</p>
+                    <p style="margin-top: 10px;"><strong>Implementation:</strong> 51 core + framework + customization guide</p>
+                    <p style="margin-top: 10px;"><strong>Pro:</strong> 100+ (and growing weekly)</p>
+                    <p style="margin-top: 10px;"><strong>Master:</strong> 147 total + advanced techniques</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What about the community?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Pro and Master members get access to a private Slack community of builders and AI users. Share ideas, ask questions, learn from each other.</p>
+                    <p style="margin-top: 15px;">Master also includes quarterly live workshops and direct access for Q&A.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA FOOTER -->
+    <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 30px;">Ready to Master AI Prompting?</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 40px;">Choose your path. 30-day guarantee on one-time purchases.</p>
+            <a href="#products" class="cta-button cta-primary">See All Plans</a>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Closet AI Genius. All rights reserved.</p>
+            <p>Built for builders. By builders.</p>
+            <div class="footer-links">
+                <a href="mailto:support@closetaigenius.com">Contact</a>
+                <a href="https://twitter.com/ClosetAIGenius">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer.active').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.querySelector('.faq-toggle').classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
